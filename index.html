@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTO RIKO PREMIUM</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,sans-serif;background:#192126;color:white;overflow:hidden}
+#particles-js{position:fixed;width:100%;height:100%;z-index:-1}
+.slide{height:100vh;width:100vw;display:none;padding:60px}
+.slide.active{display:flex;flex-direction:column;justify-content:center}
+.title{font-size:4rem;font-weight:700;text-align:center;animation:drop 1.8s ease}
+@keyframes drop{from{transform:translateY(-150px);opacity:0}to{transform:translateY(0);opacity:1}}
+.glass{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+padding:25px;
+}
+.row{display:flex;gap:20px;flex-wrap:wrap}
+.col{flex:1;min-width:300px}
+.btn{
+padding:12px 25px;border:none;border-radius:30px;
+background:white;color:#192126;font-weight:bold;
+cursor:pointer;margin:5px;
+}
+.btn:hover{transform:scale(1.05)}
+.nav{margin-top:20px}
+.progress{
+position:fixed;top:0;left:0;height:6px;background:white;width:16%;
+transition:.4s;z-index:1000
+}
+.profile{
+width:180px;height:180px;border-radius:50%;
+border:4px solid white;
+display:flex;align-items:center;justify-content:center;
+font-size:70px;margin:auto;margin-bottom:20px
+}
+.contact i{margin-right:10px}
+a{color:white}
+</style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="progress" id="progress"></div>
+
+<div class="slide active">
+<div class="profile"><i class="fa-solid fa-user"></i></div>
+<h1 class="title">PORTOFOLIO RIKO ARIANTO</h1>
+<p style="text-align:center;margin-top:20px">Welcome to My Professional Portfolio</p>
+<div style="text-align:center;margin-top:30px">
+<button class="btn" onclick="next()">NEXT</button>
+</div>
+</div>
+
+<div class="slide">
+<h1>Kenapa Harus Mengenal Riko?</h1><br>
+<div class="row">
+<div class="glass col">
+<ul>
+<li>Suka belajar hal baru</li>
+<li>Sekretaris Rohkris</li>
+<li>Nilai Informatika tinggi</li>
+<li>Prestasi Taekwondo</li>
+</ul>
+</div>
+<div class="glass col">
+<ul>
+<li>Suka Python, HTML, Tkinter</li>
+<li>Praktis & berorientasi hasil</li>
+<li>Kritis dan analitis</li>
+<li>Mandiri dan aktif membuat proyek</li>
+</ul>
+</div>
+</div>
+<div class="nav"><button class="btn" onclick="back()">BACK</button><button class="btn" onclick="next()">NEXT</button></div>
+</div>
+
+<div class="slide">
+<h1>Riwayat Riko</h1><br>
+<div class="row">
+<div class="glass col">
+<h3>Data Diri</h3>
+<p>Jakarta, 06 Januari 2009</p>
+<p>SDN 05 Cibubur</p>
+<p>SMPN 103 Jakarta</p>
+<p>SMA Prestasi Prima</p>
+</div>
+<div class="glass col">
+<h3>Keahlian</h3>
+<p>Microsoft Office</p>
+<p>Python Basic</p>
+<p>Visual Studio Code</p>
+</div>
+</div>
+<div class="nav"><button class="btn" onclick="back()">BACK</button><button class="btn" onclick="next()">NEXT</button></div>
+</div>
+
+<div class="slide">
+<h1>Jasa yang Ditawarkan?</h1><br>
+<div class="row">
+<div class="glass col"><h3>Website UMKM</h3></div>
+<div class="glass col"><h3>Digital Marketing</h3></div>
+<div class="glass col"><h3>Produk Makanan & Minuman</h3></div>
+</div>
+<div class="nav"><button class="btn" onclick="back()">BACK</button><button class="btn" onclick="next()">NEXT</button></div>
+</div>
+
+<div class="slide">
+<h1>Jobsheet & Bukti Skill</h1><br>
+<div class="glass">
+<p><a target="_blank" href="https://docs.google.com/document/d/18oFEks-fXH833OwcSlFvOvkM4vHmhe3e/edit">Jobsheet Python 1</a></p><br>
+<p><a target="_blank" href="https://docs.google.com/document/d/16e3LIwhXlXt_BPFOwA4-NA2KnfWHrg5M/edit">Jobsheet Python 2</a></p><br>
+<p><a target="_blank" href="https://docs.google.com/document/d/1iKPdtCzwu6pXMmolFAtRKw8ic8NaifQg/edit">Jobsheet Python 3</a></p>
+</div>
+<div class="nav"><button class="btn" onclick="back()">BACK</button><button class="btn" onclick="next()">NEXT</button></div>
+</div>
+
+<div class="slide">
+<h1>Contact Riko</h1><br>
+<div class="glass contact">
+<p><i class="fa-brands fa-instagram"></i>@stetsen12</p>
+<p><i class="fa-brands fa-whatsapp"></i>+62 838-6109-8548</p>
+<p><i class="fa-solid fa-envelope"></i>rikoarianto6109@gmail.com</p>
+</div>
+<br>
+<div class="glass" style="text-align:center">
+<h1>TERIMA KASIH :) </h1>
+<p>Terima kasih sudah mengunjungi PORTO RIKO.</p>
+</div>
+<div class="nav"><button class="btn" onclick="back()">BACK</button></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{
+particles:{number:{value:60},size:{value:3},line_linked:{enable:true},move:{speed:2}}});
+
+let cur=0;
+const slides=document.querySelectorAll('.slide');
+const bar=document.getElementById('progress');
+
+function show(){
+slides.forEach(s=>s.classList.remove('active'));
+slides[cur].classList.add('active');
+bar.style.width=((cur+1)/slides.length*100)+'%';
+}
+function next(){if(cur<slides.length-1){cur++;show();}}
+function back(){if(cur>0){cur--;show();}}
+</script>
+</body>
+</html>
